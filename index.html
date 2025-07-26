@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blockchain File Upload</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Upload & Verify File</h1>
+        <input type="file" id="fileInput">
+        <div class="button-group">
+            <button id="uploadBtn">Upload to Blockchain</button>
+            <button id="verifyBtn">Verify File</button>
+        </div>
+        <p id="statusMessage"></p>
+    </div>
+
+    <!-- Ethers.js from CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/ethers@5.7.2/dist/ethers.umd.min.js"></script>
+    <script type="module" src="app.js"></script>
+</body>
+</html>
