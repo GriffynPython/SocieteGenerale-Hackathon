@@ -1,97 +1,68 @@
-Blockchain File Verification System
-📌 Overview
+# Blockchain File Verification System 📌  
 
-This project provides a web-based interface for uploading file hashes to a blockchain and verifying their authenticity. It uses Ethereum smart contracts to store and verify file hashes, ensuring tamper-proof document verification.
-🌟 Features
+![Blockchain File Verification](https://img.shields.io/badge/Blockchain-File_Verification-blue) 
+![Ethereum](https://img.shields.io/badge/Ethereum-3C3C3D?logo=ethereum) 
+![Web3](https://img.shields.io/badge/Web3.js-F16822?logo=web3.js)
 
-    File Hashing: Automatically computes SHA-256 hashes of uploaded files
+A web-based interface for tamper-proof document verification using Ethereum blockchain.
 
-    Blockchain Storage: Stores file hashes on the Ethereum blockchain
+## 🌟 Key Features  
 
-    Verification: Checks if files exist in the blockchain records
+- 🔒 **File Hashing** - Automatically computes SHA-256 hashes of uploaded files  
+- ⛓ **Blockchain Storage** - Stores file hashes permanently on Ethereum blockchain  
+- ✔️ **Verification System** - Checks file authenticity against blockchain records  
+- 💎 **MetaMask Integration** - Secure transactions via popular Ethereum wallet  
+- 🎨 **User-Friendly UI** - Clean, intuitive interface with real-time feedback  
 
-    User-Friendly Interface: Clean, intuitive UI with status feedback
+## 🛠 Technology Stack  
 
-    MetaMask Integration: Secure blockchain transactions via MetaMask
+| Category       | Technologies                          |
+|----------------|---------------------------------------|
+| Frontend       | HTML5, CSS3, JavaScript (ES6+)       |
+| Blockchain     | Ethereum, Ethers.js                   |
+| Cryptography   | Web Crypto API (SHA-256)              |
 
-🛠️ Technology Stack
+## 🚀 Quick Start  
 
-    Frontend: HTML5, CSS3, JavaScript (ES6+)
+### Prerequisites  
+- Modern browser (Chrome/Firefox/Edge)  
+- [MetaMask extension](https://metamask.io/) installed  
+- Testnet ETH (for testing)  
 
-    Blockchain: Ethereum, Ethers.js library
-
-    Cryptography: Web Crypto API for SHA-256 hashing
-🚀 Getting Started
-Prerequisites
-
-    Modern web browser (Chrome, Firefox, Edge)
-
-    MetaMask extension installed
-
-    Ethereum testnet ETH (for testing)
-
-Installation
-
-    Clone the repository:
-    bash
-
+### Installation  
+```bash
 git clone https://github.com/yourusername/blockchain-file-verification.git
 cd blockchain-file-verification
 
-Install a local web server (if needed):
-
-    Python:
-    bash
-
-python -m http.server 8000
-
-Node.js:
+Start local server:
 bash
 
-    npx serve
+# Python
+python -m http.server 8000
 
-Open the application in your browser:
-text
+# Node.js alternative
+npx serve
 
-    http://localhost:8000/public
+Access application at:
+http://localhost:8000/public
+🖥 How to Use
 
-🖥️ Usage
-
-    Connect MetaMask when prompted
+    Connect your MetaMask wallet
 
     Select a file using the file picker
 
-    Choose an action:
+    Choose action:
 
-        Upload to Blockchain: Stores the file's hash on-chain
+        Upload to Blockchain → Stores file hash permanently
 
-        Verify File: Checks if the file exists in blockchain records
+        Verify File → Checks against existing blockchain records
 
-🔧 Smart Contract Details
-
-The system uses a simple smart contract with two main functions:
+🔍 Smart Contract Details
 solidity
 
-// Stores a file hash
+// Stores a file hash 
 function uploadFile(string memory fileHash) public;
 
-// Verifies a file hash
-function verifyFile(string memory fileHash) public view returns (bool exists, address uploader);
-
-🌐 Live Demo
-
-A demo version is available at: [demo-url-here] (link your hosted version if available)
-📝 License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
-🤝 Contributing
-
-    Fork the project
-
-    Create your feature branch (git checkout -b feature/AmazingFeature)
-
-    Commit your changes (git commit -m 'Add some AmazingFeature')
-
-    Push to the branch (git push origin feature/AmazingFeature)
-
-    Open a Pull Request
+// Verifies a file hash 
+function verifyFile(string memory fileHash) 
+    public view returns (bool exists, address uploader);
